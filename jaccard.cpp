@@ -23,7 +23,7 @@ double jaccardSimilarity(){
     set_intersection(A.begin(), A.end(), B.begin(), B.end(),back_inserter(setIntersection));
     set_union(A.begin(), A.end(), B.begin(), B.end(), back_inserter(setUnion));
     double result = double(setIntersection.size())/double(setUnion.size())*double(100);
-    cout << result<<"%" << endl;
+    cout << result<<"%"<< endl;
     return result;
 }
 
@@ -32,10 +32,10 @@ double jaccardSimilarity(){
 void removeMarkAndLowercase(string &inputString){
     for (char &c : inputString) {
         unsigned char uc = static_cast<unsigned char>(c);
-        if (std::isspace(uc) || std::ispunct(uc)) {
+        if (isspace(uc) || ispunct(uc)) {
             c = ' ';
         } else {
-            c = static_cast<char>(std::tolower(uc));
+            c = static_cast<char>(tolower(uc));
         }
     }
 }
@@ -61,6 +61,10 @@ int main(){
         listB.push_back(word);
 
     }   
+
+    for(auto &word:listB){
+        cout << word << endl;
+    }
     jaccardSimilarity();
    
     
