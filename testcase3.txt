@@ -1,0 +1,7 @@
+Paragraph A:
+
+The quick brown fox jumps over the lazy dog on a sunny afternoon. This sentence is often used in typography to show how every letter of the English alphabet can appear in one line.
+
+Paragraph B:
+
+The quick brown fox jumps over the sleeping cat during a warm afternoon. This sentence is commonly used in typography to demonstrate how all letters of the English alphabet can fit into a single line.

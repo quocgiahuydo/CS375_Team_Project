@@ -1,0 +1,7 @@
+Paragraph A:
+
+The quick brown fox jumps over the lazy dog in a quiet field.
+
+Paragraph B:
+
+The quick brown fox jumps over the sleeping cat in a calm field.

@@ -1,2 +1,9 @@
 Paragraph A:
 
+The quick brown fox jumps over the lazy dog in a quiet field on a sunny afternoon. This classic sentence is often used in typography and computer science to demonstrate how all letters of the English alphabet can appear within a single line of text. Because of its simplicity and balance, it is commonly chosen for testing fonts, keyboards, and text-processing systems.
+
+Paragraph B:
+
+The quick brown fox jumps over the sleeping cat in a calm field during a warm afternoon. This well-known sentence is frequently used in typography and computing to show how every letter of the English alphabet can be included in one short line of text. Due to its clarity and structure, it is widely selected for evaluating fonts, input devices, and text-analysis software.
+
+

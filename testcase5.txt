@@ -1,0 +1,7 @@
+Paragraph A:
+
+The quick brown fox jumps over the lazy dog in a quiet field on a sunny afternoon. This sentence has become famous because it contains every letter of the English alphabet. As a result, it is widely used in typography, programming, and design to test fonts and text-rendering systems.
+
+Paragraph B:
+
+On a warm afternoon, the quick brown fox jumps over the sleeping cat in a calm field. The sentence is well known for including all letters of the English alphabet, which is why it is commonly used in programming, typography, and design to evaluate font styles and display systems.
