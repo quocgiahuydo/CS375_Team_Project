@@ -15,9 +15,6 @@ using namespace std;
 double jaccardSimilarity(){
     set<string> A ={"The", "quick", "brown","fox", "jumps" ,"over" ,"the" ,"lazy" ,"dog"};
     set<string> B ={"The", "quick","brown", "fox", "jumps" ,"over" ,"the" ,"sleeping" ,"cat"};
-    
-    
-   
     vector<string> setIntersection;
     vector<string> setUnion;
     set_intersection(A.begin(), A.end(), B.begin(), B.end(),back_inserter(setIntersection));
@@ -46,25 +43,39 @@ void stringProcess(string &inputA, string &inputB){
 
 }
 
+
+
 int main(){
-    string inputA ="Exercise improves mental health.";
-    
+    string inputA ="Exercise improves mental health.";   
     string inputB="Working out boosts a person's mental well-being.";
-    cout << inputB<<endl;
-    removeMarkAndLowercase(inputB);
-    stringstream ss(inputB);
-    
+    stringProcess(inputA, inputB);
+    stringstream ssA(inputA);
+    stringstream ssB(inputB);
+
     vector<string> listB;
-    string word;
-    while(ss >> word){
-        cout << "Word in sentence: " <<word<<endl;
-        listB.push_back(word);
+    vector<string> listA;
+    string wordB;
+    string wordA;
+    while(ssB >> wordB){
+        //cout << "Word in sentence: " <<wordB<<endl;
+        listB.push_back(wordB);
 
     }   
+    while(ssA>> wordA){
+        //cout << "Word in sentence: " <<wordA<<endl;
+        listA.push_back(wordA);
 
+    }   
+    
     for(auto &word:listB){
         cout << word << endl;
     }
+    cout <<endl;
+    for(auto &word:listA){
+        cout << word << endl;
+    }
+
+
     jaccardSimilarity();
    
     
