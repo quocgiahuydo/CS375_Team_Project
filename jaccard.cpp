@@ -12,9 +12,12 @@ using namespace std;
 
 
 
-double jaccardSimilarity(){
-    set<string> A ={"The", "quick", "brown","fox", "jumps" ,"over" ,"the" ,"lazy" ,"dog"};
-    set<string> B ={"The", "quick","brown", "fox", "jumps" ,"over" ,"the" ,"sleeping" ,"cat"};
+double jaccardSimilarity(vector<string> &listA, vector<string> &listB){
+
+    set<string> A;
+    set<string> B;
+    A.insert(listA.begin(), listA.end());
+    B.insert(listB.begin(), listB.end());
     vector<string> setIntersection;
     vector<string> setUnion;
     set_intersection(A.begin(), A.end(), B.begin(), B.end(),back_inserter(setIntersection));
@@ -46,8 +49,8 @@ void stringProcess(string &inputA, string &inputB){
 
 
 int main(){
-    string inputA ="Exercise improves mental health.";   
-    string inputB="Working out boosts a person's mental well-being.";
+    string inputA ="The quick brown fox jumps over the lazy dog";   
+    string inputB="The quick brown fox jumps over the sleeping cat";
     stringProcess(inputA, inputB);
     stringstream ssA(inputA);
     stringstream ssB(inputB);
@@ -76,7 +79,8 @@ int main(){
     }
 
 
-    jaccardSimilarity();
+    double result = jaccardSimilarity(listA, listB);
+    cout <<"The similarity between 2 strings is: " << result <<"%"<< endl;
    
     
     return 0;
