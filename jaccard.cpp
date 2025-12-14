@@ -8,6 +8,8 @@
 #include <sstream>
 #include <map>
 #include <fstream>
+#include <chrono>
+#include <iomanip>
 #include <unordered_set>
 
 using namespace std;
@@ -195,6 +197,7 @@ int main(){
         cout << "========================================\n";
         cout << "File: " << file << "\n";
 
+        auto t0 = std::chrono::high_resolution_clock::now();
         string inputA, inputB;
         readSampleAndExtract(file, inputA, inputB);
 
@@ -223,6 +226,11 @@ int main(){
 
         double overall = jaccardFromTokens(tokensA, tokensB);
         cout << "Overall Jaccard = " << overall << "%\n";
+
+        auto t1 = std::chrono::high_resolution_clock::now();
+        double ms = std::chrono::duration_cast<std::chrono::microseconds>(t1 - t0).count() / 1000.0;
+        cout << fixed << setprecision(3);
+        cout << "Running time: " << ms << " ms\n";
     }
 
     return 0;
