@@ -1,4 +1,4 @@
-all:	jaccard
+all:	jaccard lcs
 
 jaccard:	jaccard.o
 			g++ -std=c++11 -Wextra -Wall -Wno-unused-parameter jaccard.o -o jaccard
@@ -13,4 +13,4 @@ lcs.o:	lcs.cpp
 			g++ -c -g -std=c++11 -Wextra -Wall -Wno-unused-parameter lcs.cpp -o lcs.o
 
 clean:		
-		rm jaccard.o jaccard
+		rm jaccard.o jaccard lcs.o lcs
